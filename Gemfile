@@ -62,7 +62,7 @@ gem 'pdfkit' # apt-get install wkhtmltopdf
 gem 'geoip'
 gem 'rubyzip', '0.9.4', :require => 'zip/zip'
 
-gem 'newrelic_rpm'
+#gem 'newrelic_rpm'
 
 # authentication
 gem 'omniauth', '~> 0.3.0'
@@ -100,7 +100,7 @@ end
 group :scripts do
   gem 'eventmachine', '~> 0.12.10'
   gem 'em-websocket', '~> 0.3.0'
-  gem 'twitter', '1.7.2'
+  gem 'twitter', git: 'https://github.com/sferik/twitter.git', tag: 'v1.7.2'
 end
 
 group :test do
