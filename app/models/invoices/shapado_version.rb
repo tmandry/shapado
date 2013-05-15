@@ -66,7 +66,12 @@ class ShapadoVersion
   end
 
   def self.reload!
-    return unless AppConfig.is_shapadocom
+    unless AppConfig.is_shapadocom
+      v = libre
+      v.token = 'free'
+      v.save
+      return
+    end
 
     versions_data = YAML.load_file("#{Rails.root}/config/versions.yml")
 
